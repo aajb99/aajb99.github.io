@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Aaron's Stat Blog 
+title: Mighty Stats 
 email: aaron.jacob.brown@gmail.com 
-description: "Covering concepts in Statistics and Data Science" 
+description: "Where the Power of Statistics and Data Science is Covered" 
 baseurl: "aaronbrown-blog" # the name of the repository 
 url: "https://aajb99.github.io" #  change this to "https://<your-github-username>.github.io"
-image: https://photos.google.com/photo/AF1QipMd37MCtvIlmSUtGv0fVm45xmpNgw0_5wgXketg
+image: https://github.com/aajb99/aaronbrown-blog/blob/main/images/20230805_210023%20(2).jpg
 author: Aaron Brown
 copyright: AB # Your initials or what you want the copyright to be.  Leave empty for no copyright
 footer_description:
