@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Notable Visual Tools in the Matplotlib Library"
+title:  "Exploring the Visual Tools of Seaborn and other Visual Libraries"
 author: Aaron Brown
-description: A tutorial exploring the Matplotlib Cheatsheet and its powerful visual tools
+description: A tutorial exploring the Seaborn Cheatsheet and its powerful visual tools along with a brief introduction to Matplotlib
 image: "/assets/images/20220722_124650.jpg"
 --- 
 
