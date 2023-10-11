@@ -87,13 +87,17 @@ sns.regplot(x='petal_width', y='petal_length', data=iris, marker='.')
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/regplt1.png" alt="" style="width:500px;"/>
 
+The examples I've showed you are merely a fraction of the plot functions offered in Seaborn. Again, I strongly suggest exploring the [Seaborn Cheatsheet](https://www.markdownguide.org/extended-syntax/) to practice additional functions. There are also plenty of other sources to look to when learning more about Seaborn and its capabilities. The [Seaborn API Reference List](https://seaborn.pydata.org/api.html) is such a source, and goes into further depth with plotting functions—with scatterplot(), for example, you can learn more about how "hue", "size", "marker", and other casual parameters can be utilized in comparing the levels of a categorical variable.
 
+There's so much more to Seaborn than I can cover in a single tutorial, but there is certainly one last thing I feel should be discussed.
+
+
+## Seaborn's Companionship with Matplotlib
+
+While it is common to use Seaborn in Data Science to render plots and create aesthetically pleasing visualizations of one's data and stastical analysis, it is important to know where Seaborn is derived from. The Seaborn library was developed on top of Matplotlib—another data visualization tool in Python. Matplotlib also includes a variety of plotting and visualization functions, but it is not considered to be as "specialized" or effective as Seaborn in creating visually appealing and/or more complex plots. However, there are benefits to pulling functions from both libraries, and I wanted to introduce certain cases where both come in handy.
+
+* violin plot example here
 
 
 * (look at seaborn cheatsheet https://images.datacamp.com/image/upload/v1676302629/Marketing/Blog/Seaborn_Cheat_Sheet.pdf and matplotlib cheatsheet https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png) make sure to inclue in plots tools such as markers, color wheel, and animations
 
-* basic plots: imshow and contour
-
-* advanced plot: violin plot
-
-* maybe even a scale to show animation
