@@ -30,18 +30,25 @@ titanic
 
 # %%
 
-sns.stripplot(x='petal_width', y='sepal_width', hue='species', size=6, data=iris)
+strpplot1 = sns.stripplot(x='species', y='sepal_width', hue='species', size=6, data=iris)
+
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))  # Adjust the 'bbox_to_anchor' to move the legend to the right
+plt.savefig("strpplot1.png", bbox_inches='tight')
 
 
 # %%
 
-sns.stripplot(x='petal_width', y='sepal_width', hue='species', data=iris, size=5,
+sns.scatterplot(x='petal_width', y='sepal_width', hue='species', data=iris,
               marker='.')
+
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))  # Adjust the 'bbox_to_anchor' to move the legend to the right
+plt.savefig("sctrplt1.png", bbox_inches='tight')
 
 # %%
 
 sns.regplot(x='petal_width', y='petal_length', data=iris, marker='.')
 
+plt.savefig("regplt1.png", bbox_inches='tight')
 
 # %%
 
