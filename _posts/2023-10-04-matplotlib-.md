@@ -65,7 +65,7 @@ The only necessary parameters for stripplot() are
 
 However, I also incorporated the parameters of "hue" and "size" to demonstrate the casual parameters you can choose to either specify or ignore (ignoring these other parameters sets them to a default condition). 
 
-These casual parameters can prove particularly useful in certain cases. In analyzing two quantitative variables with a scatterplot, for example, you can also involve a categorical variable using the "hue" parameter. "Size" and "shape" are also helpful in determining the size and appearance of the points on the scatterplot.
+These casual parameters can prove particularly useful in certain cases. In analyzing two quantitative variables with a scatterplot, for example, you can also involve a categorical variable using the "hue" parameter. "Size" and "marker" are also helpful in determining the size and appearance of the points on the scatterplot.
 
 ```
 ---
@@ -74,6 +74,20 @@ sns.scatterplot(x='petal_width', y='sepal_width', hue='species', data=iris,
 ---
 ```
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/sctrplt1.png" alt="" style="width:500px;"/>
+
+Similarly to our previous example with stripplot() we incorporate "hue" according to the levels of species in the iris dataset. However, because x and y are both quantitative variables in the scatterplot, a categorical variable is added by color in order to compare its levels in the data. Also, "marker" is altered as a way to adjust the size of the data points.
+
+In addition to the exploratory plots previously mentioned, Seaborn includes plotting functions designed to portray relationships between quantitative variables. Below, for example, is a linear regression plot for petal_length by petal_width from the iris dataset.
+
+```
+---
+sns.regplot(x='petal_width', y='petal_length', data=iris, marker='.')
+---
+```
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/regplt1.png" alt="" style="width:500px;"/>
+
+
 
 
 * (look at seaborn cheatsheet https://images.datacamp.com/image/upload/v1676302629/Marketing/Blog/Seaborn_Cheat_Sheet.pdf and matplotlib cheatsheet https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png) make sure to inclue in plots tools such as markers, color wheel, and animations
