@@ -94,10 +94,34 @@ There's so much more to Seaborn than I can cover in a single tutorial, but there
 
 ## Seaborn's Companionship with Matplotlib
 
-While it is common to use Seaborn in Data Science to render plots and create aesthetically pleasing visualizations of one's data and stastical analysis, it is important to know where Seaborn is derived from. The Seaborn library was developed on top of Matplotlib—another data visualization tool in Python. Matplotlib also includes a variety of plotting and visualization functions, but it is not considered to be as "specialized" or effective as Seaborn in creating visually appealing and/or more complex plots. However, there are benefits to pulling functions from both libraries, and I wanted to introduce certain cases where both come in handy.
+While it is common to use Seaborn in Data Science to render plots and create aesthetically pleasing visualizations of one's data and stastical analysis, it is important to know where Seaborn is derived from. The Seaborn library was developed on top of Matplotlib—another data visualization tool in Python. Matplotlib also includes a variety of plotting and visualization functions, but it is not considered to be as "specialized" or effective as Seaborn in creating visually appealing and/or more complex plots. However, there are benefits to pulling functions from both libraries, and I want to introduce certain cases where both come in handy.
 
-* violin plot example here
+Now, you can import Matplotlib as a separate library from Seaborn, but as you can see above, we imported it as Matplotlib.pyplot which just allows us to apply Matplotlib functions to our Seaborn-created objects.
 
+With that in mind, let's start out by creating a violin plot with our titanic data using Seaborn.
+
+```
+---
+sns.violinplot(x='sex', y='age', hue='survived', split=True, data=titanic)
+---
+```
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/violplt1.png" alt="" style="width:500px;"/>
+
+Here, I am using similar parameters to previous plots, except "split" is particularly useful for violin plots when you are applying a categorical variable to "hue". I would encourage you to look into other parameters and how they can strengthen you violin plot.
+
+To this point, I've shown you a variety of plots offered in Seaborn, but without specific customizations such as labeling and layout. That is where Matplotlib comes into play. Under "Further Customizations" in the Seaborn Cheatsheet, you will see functions that are designed to help customize your plot. We will now incorporate some of these—specifically labeling functions—to our violin plot.
+
+```
+---
+sns.violinplot(x='sex', y='age', hue='survived', split=True, data=titanic)
+
+plt.title('Titanic: Age by Gender, Survival Comparison')
+plt.ylabel('Passenger Age')
+plt.xlabel('Passenger Gender')
+---
+```
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/violplt2.png" alt="" style="width:500px;"/>
 
 * (look at seaborn cheatsheet https://images.datacamp.com/image/upload/v1676302629/Marketing/Blog/Seaborn_Cheat_Sheet.pdf and matplotlib cheatsheet https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png) make sure to inclue in plots tools such as markers, color wheel, and animations
 
