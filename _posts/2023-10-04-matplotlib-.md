@@ -56,7 +56,7 @@ I want to go over some commonly-used functions in the "Categorical Plots" sectio
 sns.stripplot(x='species', y='sepal_width', hue='species', size=6, data=iris)
 ---
 ```
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/strpplot1.png" alt="" style="width:300px;"/>
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/strpplot1.png" alt="" style="width:500px;"/>
 
 The only necessary parameters for stripplot() are
 1. Your x variable, which is typically your categorical data if y is denoted as the response.
