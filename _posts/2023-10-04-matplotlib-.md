@@ -65,10 +65,15 @@ The only necessary parameters for stripplot() are
 
 However, I also incorporated the parameters of "hue" and "size" to demonstrate the casual parameters you can choose to either specify or ignore (ignoring these other parameters sets them to a default condition). 
 
+These casual parameters can prove particularly useful in certain cases. In analyzing two quantitative variables with a scatterplot, for example, you can also involve a categorical variable using the "hue" parameter. "Size" and "shape" are also helpful in determining the size and appearance of the points on the scatterplot.
 
-
-
-
+```
+---
+sns.scatterplot(x='petal_width', y='sepal_width', hue='species', data=iris,
+              marker='.')
+---
+```
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/sctrplt1.png" alt="" style="width:500px;"/>
 
 
 * (look at seaborn cheatsheet https://images.datacamp.com/image/upload/v1676302629/Marketing/Blog/Seaborn_Cheat_Sheet.pdf and matplotlib cheatsheet https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png) make sure to inclue in plots tools such as markers, color wheel, and animations
