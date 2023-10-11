@@ -27,20 +27,43 @@ But rather than simply describing Seaborn's capabilities, why don't we dive righ
 
 ## Seaborn's Primary Plotting Functions and Customization Methods
 
-Seaborn is a library in Python, and must therefore be imported into your Python Environment. However, because we will also be using Seaborn's companion visualization library Matplotlib in this tutorial, we should load both by inputting the following code:
+Seaborn is a library in Python, and must therefore be imported into your Python Environment. However, because we will also be using Seaborn's companion visualization library Matplotlib in this tutorial, we should load both by inputting the following code.
 
 ```
 ---
-
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 ---
 ```
 
+(In importing these libraries, we call them by their abbreviations "sns" and "plt" for simplicity sake, and you will see instances of these later on).
 
+Awesome! Now that we are set up with our two libraries, we can get started with our data visualization practice. First off, we need to determine which datasets we'll be using to perform visualization. In this tutorial, I will be using two datasets of differing variables and variable types in order to practice visualization with both categorical and quantitative variables. The 'iris' and 'titanic' datasets are already built-in to Python, so let's use those.
 
+```
+---
+iris = sns.load_dataset('iris')
+titanic = sns.load_dataset('titanic')
+---
+```
 
+As you can see in the code above, Seaborn has many functions with different uses—even ones to load in a dataset! Now we will be focusing on functions from the [Seaborn Cheatsheet](https://www.markdownguide.org/extended-syntax/). You can read along as you search through the sheet, but feel free to continue using it when working on data visualization.
+
+I want to go over some commonly-used functions in the "Categorical Plots" section. These functions are used to better understand categorical variables and relationships between variables. stripplot(), for instance, will help you determine the relationship between a categorical variable and a quantitative one—more or less, it is the substitution for a scatterplot in the presence of categorical data.
+
+```
+---
+sns.stripplot(x='species', y='sepal_width', hue='species', size=6, data=iris)
+---
+```
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/strpplot1.png" alt="" style="width:300px;"/>
+
+The only necessary parameters for stripplot() are
+1. Your x variable, which is typically your categorical data if y is denoted as the response.
+2. Your y variable, which is the other variable in the analysis (typically the quantitative variable).
+3. Lastly, the data of focus. This dataset should carry both variables.
+
+However, I also incorporated the parameters of "hue" and "size" to demonstrate the casual parameters you can choose to either specify or ignore (ignoring these other parameters sets them to a default condition). 
 
 
 
