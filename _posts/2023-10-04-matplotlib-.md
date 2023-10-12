@@ -161,13 +161,13 @@ plt.savefig("iris_prplt.png",
             transparent=True)
 ---
 ```
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/iris_prplt_dark.png" alt="" style="width:500px;"/>
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/prplt_combo.jpg" alt="" style="width:500px;"/>
 
 Similarly to the other customization functions we performed, savefig() is run alongside the plot function—it will save the most recent plot output to the specified file name. With this example of savefig(), I included the casual parameter "transparent", which is another method for changing the theme of your plot (except this parameter offers the two different design options displayed above). If you prefer the original white display, you may ignore the "transparent" parameter altogether.
 
 
 ## Conclusion
 
-Congradulations! You are one step closer to becoming a pro in data visualization. Having read this brief introduction to Seaborn and some of its core functions, you now have the know-how to read in datasets and explore their respective variables and other characteristics. You also know more about Seaborn's main purpose as a Python library along with its interaction with Matplotlib. However, there is still plenty to learn about the functions included in these libraries, and how they can help you portray more complex visuals in your analysis. I invite you to explore the additional resources previously mentioned, along with the [Matplotlib Cheatsheet](https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png). Doing so will broaden your perspective of Python's visual libraries and the support they can provide you with along your Data Science journey. 
+Congratulations! You are one step closer to becoming a pro in data visualization. Having read this brief introduction to Seaborn and some of its core functions, you now have the know-how to read in datasets and explore their respective variables and other characteristics. You also know more about Seaborn's main purpose as a Python library along with its interaction with Matplotlib. However, there is still plenty to learn about the functions included in these libraries, and how they can help you portray more complex visuals in your analysis. I invite you to explore the additional resources previously mentioned, along with the [Matplotlib Cheatsheet](https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png). Doing so will broaden your perspective of Python's visual libraries and the support they can provide you with along your Data Science journey. 
 
 Now that you have the necessary tools to get started, go make some charts!
