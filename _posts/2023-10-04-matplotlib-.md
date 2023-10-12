@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Exploring Powerful Visual Tools in Seaborn and other Visual Libraries"
+title:  "Exploring Powerful Visualization Tools in Seaborn and other Visual Libraries"
 author: Aaron Brown
-description: An introduction to the Seaborn Cheatsheet and powerful visualization tools in Seaborn, as well as a brief introduction to Matplotlib
+description: An introduction to the Seaborn Cheatsheet and powerful visualization tools in Seaborn, as well as a brief introduction to Matplotlib.
 image: "/assets/images/20220722_124650.jpg"
 --- 
 
