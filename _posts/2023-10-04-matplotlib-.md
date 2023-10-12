@@ -25,7 +25,7 @@ Python's Seaborn is well-known in Data Science for its quick and easy use as a d
 But rather than simply describing Seaborn's capabilities, why don't we dive right into it.
 
 
-## Seaborn's Primary Plotting Functions and Customization Methods
+## Seaborn's Primary Plotting Functions
 
 Seaborn is a library in Python, and must therefore be imported into your Python Environment. However, because we will also be using Seaborn's companion visualization library Matplotlib in this tutorial, we should load both by inputting the following code.
 
@@ -92,7 +92,7 @@ The examples I've showed you are merely a fraction of the plot functions offered
 There's so much more to Seaborn than I can cover in a single tutorial, but there is certainly one last thing I feel should be discussed.
 
 
-## Seaborn's Companionship with Matplotlib
+## Plot Customization and Seaborn's Companionship with Matplotlib
 
 While it is common to use Seaborn in Data Science to render plots and create aesthetically pleasing visualizations of one's data and stastical analysis, it is important to know where Seaborn is derived from. The Seaborn library was developed on top of Matplotlib—another data visualization tool in Python. Matplotlib also includes a variety of plotting and visualization functions, but it is not considered to be as "specialized" or effective as Seaborn in creating visually appealing and/or more complex plots. However, there are benefits to pulling functions from both libraries, and I want to introduce certain cases where both come in handy.
 
