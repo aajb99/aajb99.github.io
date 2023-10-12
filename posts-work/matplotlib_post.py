@@ -59,7 +59,15 @@ sns.violinplot(x='pclass', y='age', data=titanic)
 
 # %%
 
-sns.violinplot(x='sex', y='age', hue='survived', data=titanic)
+sns.set_style('darkgrid')
+
+sns.violinplot(x='sex', y='age', hue='survived', split=True, data=titanic)
+
+plt.title('Titanic: Age by Gender, Survival Comparison')
+plt.ylabel('Passenger Age')
+plt.xlabel('Passenger Gender') 
+
+plt.savefig("violpltdark.png")
 
 
 # %%

@@ -2,7 +2,7 @@
 layout: post
 title:  "Exploring Powerful Visual Tools in Seaborn and other Visual Libraries"
 author: Aaron Brown
-description: An introduction to the Seaborn Cheatsheet and powerful Seaborn tools for visualization, as well as a brief introduction to Matplotlib
+description: An introduction to the Seaborn Cheatsheet and powerful visualization tools in Seaborn, as well as a brief introduction to Matplotlib
 image: "/assets/images/20220722_124650.jpg"
 --- 
 
@@ -123,5 +123,51 @@ plt.xlabel('Passenger Gender')
 ```
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/violplt2.png" alt="" style="width:500px;"/>
 
-* (look at seaborn cheatsheet https://images.datacamp.com/image/upload/v1676302629/Marketing/Blog/Seaborn_Cheat_Sheet.pdf and matplotlib cheatsheet https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png) make sure to inclue in plots tools such as markers, color wheel, and animations
+You can also find customization options in other sections of the cheatsheet. In "Figure Aesthetics", for example, you can change the background of your plot using set_style() in Seaborn (in case you're tired of the blank white theme, or you want to add a grid, etc.). 
 
+```
+---
+sns.set_style('darkgrid')
+
+sns.violinplot(x='sex', y='age', hue='survived', split=True, data=titanic)
+
+plt.title('Titanic: Age by Gender, Survival Comparison')
+plt.ylabel('Passenger Age')
+plt.xlabel('Passenger Gender') 
+---
+```
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/violpltdark.png" alt="" style="width:500px;"/>
+
+Here, we are just using a couple of customization functions—I encourage you to look through more of them and to try them out!
+
+Lastly, I want to introduce one last plot and show you how to save your new plot as a png file through Matplotlib.
+
+This last plot is Seaborn's Pairplot, and is a good visualization feature for summarizing large datasets with multiple quantitative variables. All quantitative variables are compared with one another in a matrix format in order to visually describe and compare each combination's relationship. In addition to these scatterplots, histograms—as the default—are incorporated along the diagonal to depict the distribution of each variable individually.
+
+```
+---
+sns.pairplot(iris)
+---
+```
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/iris_prplt.png" alt="" style="width:500px;"/>
+
+It's as simple as that. But like I said, we're also trying to save this plot as a png file. To do so, we can use savefig() from Matplotlib.pyplot as is shown below.
+
+```
+---
+sns.pairplot(iris)
+
+plt.savefig("iris_prplt.png",
+            transparent=True)
+---
+```
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/prplt_combo.png" alt="" style="width:500px;"/>
+
+Similarly to the other customization functions we performed, savefig() is run alongside the plot function—it will save the most recent plot output to the specified file name. With this example of savefig(), I included the casual parameter "transparent", which is another method for changing the theme of your plot (except this parameter offers the two different design options displayed above). If you prefer the original white display, you may ignore the "transparent" parameter altogether.
+
+
+## Conclusion
+
+Congradulations! You are one step closer to becoming a pro in data visualization. Having read this brief introduction to Seaborn and some of its core functions, you now have the know-how to read in datasets and explore their respective variables and other characteristics. You also know more about Seaborn's main purpose as a Python library along with its interaction with Matplotlib. However, there is still plenty to learn about the functions included in these libraries, and how they can help you portray more complex visuals in your analysis. I invite you to explore the additional resources previously mentioned, along with the [Matplotlib Cheatsheet](https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png). Doing so will broaden your perspective of Python's visual libraries and the support they can provide you with along your Data Science journey. 
+
+Now that you have the necessary tools to get started, go make some charts!
