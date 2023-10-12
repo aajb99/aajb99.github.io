@@ -161,7 +161,7 @@ plt.savefig("iris_prplt.png",
             transparent=True)
 ---
 ```
-![Figure]({{site.url}}/{{site.baseurl}}/assets/images/prplt_combo.jpg)
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/iris_prplt_dark.png" alt="" style="width:500px;"/>
 
 Similarly to the other customization functions we performed, savefig() is run alongside the plot function—it will save the most recent plot output to the specified file name. With this example of savefig(), I included the casual parameter "transparent", which is another method for changing the theme of your plot (except this parameter offers the two different design options displayed above). If you prefer the original white display, you may ignore the "transparent" parameter altogether.
 
