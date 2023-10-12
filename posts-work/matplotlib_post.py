@@ -102,7 +102,11 @@ sns.catplot(x='survived',
 
 # %%
 
+
 sns.pairplot(iris)
+
+plt.savefig("iris_prplt_dark.png",
+            transparent=True)
 
 # %%
 
