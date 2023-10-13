@@ -6,6 +6,15 @@ description: An introduction to the Seaborn Cheatsheet and powerful visualizatio
 image: "/assets/images/20220722_124650.jpg"
 --- 
 
+## Introduction
+
+Data visualization is a key component of Data Science—we see it everywhere, from the beginning steps of Exploratory Analysis to the final product of our project analysis. Exploring different figures can help us Data Scientists understand more about our data and how it is structured, but they also make it easier for others to visualize and interpret our data (even if they aren't as into Data Science as you or I!). So, now that we know data visualization is a crucial part of data science and analysis, what are some good steps to get started? There are plenty of coding languages and visualization libraries we could choose from, but the Seaborn Library is a great tool to start with.
+
+Python's Seaborn is well-known in Data Science for its quick and easy use as a data visualization tool. It contains a variety of functions used to plot your data in several different ways! But what's better—it was designed to provide you with visually-appealing figures of your data. If the bland, white background of your plot doesn't fit into your presentation well, then no worries! Seaborn makes it easy for you to switch backgrounds, plot configurations, point colors and sizes, you name it.
+
+But rather than simply describing Seaborn's capabilities, why don't we dive right into it.
+
+
 ## Setting up an environment for Python and the Seaborn library
 
 * The first step to using Seaborn in your data analysis is to set up an Integrated Development Environment (IDE) for Python and its libraries. Such environments include Visual Studio Code, Pycharm, Jupyter Notebook, etc. Because this tutorial will cover specific tools in Seaborn (and Matplotlib) for data analysis and visualization, it will not cover the initial steps to set up an environment and get started with Python.
@@ -13,16 +22,6 @@ image: "/assets/images/20220722_124650.jpg"
 * To find help in setting this up, I suggest looking at [Pycharm Setup](https://www.guru99.com/how-to-install-python.html), [VS Code Setup](https://code.visualstudio.com/docs/python/python-tutorial), or other sources on setting up an environment for coding in Python.
 
 * If you have your environment all set up and ready to go, then let's get started!
-
-
-
-## Introduction
-
-Data visualization is a key component of Data Science—we see it everywhere, from the beginning steps of Exploratory Analysis to the final product of our project analysis. Exploring different figures can help us Data Scientists understand more about our data and how it is structured, but they also make it easier for others to visualize and interpret our data and our findings (even if they aren't as into Data Science as you and I!). So, now that we know data visualization is a crucial part of data science and analysis, what are some good steps to get started? There are plenty of coding languages and visualization libraries we could choose from, but the Seaborn Library is a great tool to start with.
-
-Python's Seaborn is well-known in Data Science for its quick and easy use as a data visualization tool. It contains a variety of functions used to plot your data in several different ways! But what's better—it was designed to provide you with visually-appealing figures of your data. If the bland, white background of your plot doesn't fit into your presentation well, then no worries! Seaborn makes it easy for you to switch backgrounds, plot configurations, point colors and sizes, you name it.
-
-But rather than simply describing Seaborn's capabilities, why don't we dive right into it.
 
 
 ## Seaborn's Primary Plotting Functions
@@ -35,9 +34,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ---
 ```
-
-(In importing these libraries, we call them by their abbreviations "sns" and "plt" for simplicity sake, and you will see instances of these later on).
-
 Awesome! Now that we are set up with our two libraries, we can get started with our data visualization practice. First off, we need to determine which datasets we'll be using to perform visualization. In this tutorial, I will be using two datasets of differing variables and variable types in order to practice visualization with both categorical and quantitative variables. The 'iris' and 'titanic' datasets are already built-in to Python, so let's use those.
 
 ```
@@ -49,7 +45,7 @@ titanic = sns.load_dataset('titanic')
 
 As you can see in the code above, Seaborn has many functions with different uses—even ones to load in a dataset! Now we will be focusing on functions from the [Seaborn Cheatsheet](https://www.datacamp.com/cheat-sheet/python-seaborn-cheat-sheet). You can read along as you search through the sheet, but feel free to continue using it when working on data visualization.
 
-I want to go over some commonly-used functions in the "Categorical Plots" section. These functions are used to better understand categorical variables and relationships between variables. stripplot(), for instance, will help you determine the relationship between a categorical variable and a quantitative one—more or less, it is the substitution for a scatterplot in the presence of categorical data.
+I want to go over some commonly-used functions in the "Categorical Plots" section. These functions are primarily used to better understand categorical variables. stripplot(), for instance, will help in determining the relationship between categorical and quantitative variables.
 
 ```
 ---
@@ -58,7 +54,7 @@ sns.stripplot(x='species', y='sepal_width', hue='species', size=6, data=iris)
 ```
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/strpplot1.png" alt="" style="width:500px;"/>
 
-The only necessary parameters for stripplot() are
+The only necessary parameters for most basic plots including stripplot() are
 1. Your x variable, which is typically your categorical data if y is denoted as the response.
 2. Your y variable, which is the other variable in the analysis (typically the quantitative variable).
 3. Lastly, the data of focus. This dataset should carry both variables.
@@ -87,12 +83,12 @@ sns.regplot(x='petal_width', y='petal_length', data=iris, marker='.')
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/regplt1.png" alt="" style="width:500px;"/>
 
+# Resources for Learning Seaborn
+
 The examples I've showed you are merely a fraction of the plot functions offered in Seaborn. Again, I strongly suggest exploring the [Seaborn Cheatsheet](https://www.datacamp.com/cheat-sheet/python-seaborn-cheat-sheet) to practice additional functions. There are also plenty of other sources to look to when learning more about Seaborn and its capabilities. The [Seaborn API Reference List](https://seaborn.pydata.org/api.html) is such a source, and goes into further depth with plotting functions—with scatterplot(), for example, you can learn more about how "hue", "size", "marker", and other casual parameters can be utilized in comparing the levels of a categorical variable.
 
-There's so much more to Seaborn than I can cover in a single tutorial, but there is certainly one last thing I feel should be discussed.
 
-
-## Plot Customization and Seaborn's Companionship with Matplotlib
+## Plot Customization Alongside Matplotlib
 
 While it is common to use Seaborn in Data Science to render plots and create aesthetically pleasing visualizations of one's data and stastical analysis, it is important to know where Seaborn is derived from. The Seaborn library was developed on top of Matplotlib—another data visualization tool in Python. Matplotlib also includes a variety of plotting and visualization functions, but it is not considered to be as "specialized" or effective as Seaborn in creating visually appealing and/or more complex plots. However, there are benefits to pulling functions from both libraries, and I want to introduce certain cases where both come in handy.
 
@@ -108,7 +104,9 @@ sns.violinplot(x='sex', y='age', hue='survived', split=True, data=titanic)
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/violplt1.png" alt="" style="width:500px;"/>
 
-Here, I am using similar parameters to previous plots, except "split" is particularly useful for violin plots when you are applying a categorical variable to "hue". I would encourage you to look into other parameters and how they can strengthen you violin plot.
+Here, I am using similar parameters to previous plots, except "split" is particularly useful for violin plots when you are applying a categorical variable to "hue". I would definitely look into other parameters and how they can strengthen your violin plot.
+
+# Where Matplotlib Comes into Play
 
 To this point, I've shown you a variety of plots offered in Seaborn, but without specific customizations such as labeling and layout. That is where Matplotlib comes into play. Under "Further Customizations" in the Seaborn Cheatsheet, you will see functions that are designed to help customize your plot. We will now incorporate some of these—specifically labeling functions—to our violin plot.
 
@@ -151,7 +149,7 @@ sns.pairplot(iris)
 ```
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/iris_prplt.png" alt="" style="width:500px;"/>
 
-It's as simple as that. But like I said, we're also trying to save this plot as a png file. To do so, we can use savefig() from Matplotlib.pyplot as is shown below.
+It's as simple as that. But like I said, we're also trying to save this plot as a png file. To do so, we can use savefig() from Matplotlib.pyplot.
 
 ```
 ---
@@ -168,6 +166,6 @@ Similarly to the other customization functions we performed, savefig() is run al
 
 ## Conclusion
 
-Congratulations! You are one step closer to becoming a pro in data visualization. Having read this brief introduction to Seaborn and some of its core functions, you now have the know-how to read in datasets and explore their respective variables and other characteristics. You also know more about Seaborn's main purpose as a Python library along with its interaction with Matplotlib. However, there is still plenty to learn about the functions included in these libraries, and how they can help you portray more complex visuals in your analysis. I invite you to explore the additional resources previously mentioned, along with the [Matplotlib Cheatsheet](https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png). Doing so will broaden your perspective of Python's visual libraries and the support they can provide you with along your Data Science journey. 
+Congratulations! You are one step closer to becoming a pro in data visualization. Having read this brief introduction to Seaborn, you now know more about Seaborn's core functions and how it interacts with Matplotlib. However, there is still plenty to learn about the functions included in these libraries, and how they can help you portray more complex visuals in your analysis. I invite you to explore the additional resources previously mentioned, along with the [Matplotlib Cheatsheet](https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png). Doing so will broaden your perspective of Python's visual libraries and the support they can provide you with along your Data Science journey. 
 
 Now that you have the necessary tools to get started, go make some charts!
