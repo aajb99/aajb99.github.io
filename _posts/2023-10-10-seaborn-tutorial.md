@@ -83,7 +83,7 @@ sns.regplot(x='petal_width', y='petal_length', data=iris, marker='.')
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/regplt1.png" alt="" style="width:500px;"/>
 
-# Resources for Learning Seaborn
+### Resources for Learning Seaborn
 
 The examples I've showed you are merely a fraction of the plot functions offered in Seaborn. Again, I strongly suggest exploring the [Seaborn Cheatsheet](https://www.datacamp.com/cheat-sheet/python-seaborn-cheat-sheet) to practice additional functions. There are also plenty of other sources to look to when learning more about Seaborn and its capabilities. The [Seaborn API Reference List](https://seaborn.pydata.org/api.html) is such a source, and goes into further depth with plotting functions—with scatterplot(), for example, you can learn more about how "hue", "size", "marker", and other casual parameters can be utilized in comparing the levels of a categorical variable.
 
@@ -106,7 +106,7 @@ sns.violinplot(x='sex', y='age', hue='survived', split=True, data=titanic)
 
 Here, I am using similar parameters to previous plots, except "split" is particularly useful for violin plots when you are applying a categorical variable to "hue". I would definitely look into other parameters and how they can strengthen your violin plot.
 
-# Where Matplotlib Comes into Play
+### Where Matplotlib Comes into Play
 
 To this point, I've shown you a variety of plots offered in Seaborn, but without specific customizations such as labeling and layout. That is where Matplotlib comes into play. Under "Further Customizations" in the Seaborn Cheatsheet, you will see functions that are designed to help customize your plot. We will now incorporate some of these—specifically labeling functions—to our violin plot.
 
