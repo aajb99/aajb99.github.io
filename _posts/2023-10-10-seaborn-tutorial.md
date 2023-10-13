@@ -47,7 +47,7 @@ titanic = sns.load_dataset('titanic')
 ---
 ```
 
-As you can see in the code above, Seaborn has many functions with different uses—even ones to load in a dataset! Now we will be focusing on functions from the [Seaborn Cheatsheet](https://www.markdownguide.org/extended-syntax/). You can read along as you search through the sheet, but feel free to continue using it when working on data visualization.
+As you can see in the code above, Seaborn has many functions with different uses—even ones to load in a dataset! Now we will be focusing on functions from the [Seaborn Cheatsheet](https://www.datacamp.com/cheat-sheet/python-seaborn-cheat-sheet). You can read along as you search through the sheet, but feel free to continue using it when working on data visualization.
 
 I want to go over some commonly-used functions in the "Categorical Plots" section. These functions are used to better understand categorical variables and relationships between variables. stripplot(), for instance, will help you determine the relationship between a categorical variable and a quantitative one—more or less, it is the substitution for a scatterplot in the presence of categorical data.
 
@@ -87,7 +87,7 @@ sns.regplot(x='petal_width', y='petal_length', data=iris, marker='.')
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/regplt1.png" alt="" style="width:500px;"/>
 
-The examples I've showed you are merely a fraction of the plot functions offered in Seaborn. Again, I strongly suggest exploring the [Seaborn Cheatsheet](https://www.markdownguide.org/extended-syntax/) to practice additional functions. There are also plenty of other sources to look to when learning more about Seaborn and its capabilities. The [Seaborn API Reference List](https://seaborn.pydata.org/api.html) is such a source, and goes into further depth with plotting functions—with scatterplot(), for example, you can learn more about how "hue", "size", "marker", and other casual parameters can be utilized in comparing the levels of a categorical variable.
+The examples I've showed you are merely a fraction of the plot functions offered in Seaborn. Again, I strongly suggest exploring the [Seaborn Cheatsheet](https://www.datacamp.com/cheat-sheet/python-seaborn-cheat-sheet) to practice additional functions. There are also plenty of other sources to look to when learning more about Seaborn and its capabilities. The [Seaborn API Reference List](https://seaborn.pydata.org/api.html) is such a source, and goes into further depth with plotting functions—with scatterplot(), for example, you can learn more about how "hue", "size", "marker", and other casual parameters can be utilized in comparing the levels of a categorical variable.
 
 There's so much more to Seaborn than I can cover in a single tutorial, but there is certainly one last thing I feel should be discussed.
 
