@@ -15,7 +15,7 @@ permalink: /about/
         }
 
         img {
-            width: 220px; /* Set the width of your images */
+            width: 240px; /* Set the width of your images */
             height: auto; /* Maintain aspect ratio */
         }
     </style>
